@@ -116,11 +116,11 @@
 </body> 
 <script>
 $(function() {
-     $('#attempt').keydown(function(e) {
+     $('#attempt').on('change keydown keyup', function(e) {
         inputData = $('#attempt').val()
         alert($('#attempt').val());
-        alert($(this).val());
-        alert(event.which);
+        alert($(e).val());
+        alert(e.which);
         $.ajax({
           method: "POST",
           url: "/_check",
