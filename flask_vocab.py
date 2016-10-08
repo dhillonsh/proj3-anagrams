@@ -81,8 +81,7 @@ def check():
   made only from the jumble letters, and not a word they
   already found.
   """
-  print(request.form)
-  return 'good'
+
   app.logger.debug("Entering check")
 
   ## The data we need, from form and from cookie
@@ -111,9 +110,11 @@ def check():
 
   ## Choose page:  Solved enough, or keep going? 
   if len(matches) >= flask.session["target_count"]:
-    return flask.redirect(url_for("success"))
+    return jsonify(results = {status: 'good'})
+    #return flask.redirect(url_for("success"))
   else:
-    return flask.redirect(url_for("keep_going"))
+    return jsonify(results = {status: 'bad'})
+    #return flask.redirect(url_for("keep_going"))
 
 ###############
 # AJAX request handlers 
