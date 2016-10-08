@@ -129,9 +129,9 @@ $(function() {
                alert(result['returnText']);
                if(result['returnText'] == 'matched') {
                     $('#foundList').show();     
-                    $('#foundList > #results').append(inputData);
+                    $('#foundList > #results').prepend(inputData);
                } else {
-                    $('#messagesList').append('<p class="message">' + result['returnText'] + '</p>');
+                    $('#messagesList').prepend('<p class="message">' + result['returnText'] + '</p>');
                     
                }
                //$('#message').(result['returnText']);
