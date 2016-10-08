@@ -119,7 +119,7 @@ $(function() {
      $('#attempt').on("keypress", function(e) {
         if(e.which == 8) return false;
         inputData = $(this).val();
-        alert($(e).val());
+        alert(e.value);
         $.ajax({
           method: "POST",
           url: "/_check",
