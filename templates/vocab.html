@@ -116,9 +116,10 @@
 </body> 
 <script>
 $(function() {
-     $('#attempt').on('keydown', function(event) {
-        inputData = event.value
+     $('#attempt').keydown(function(e) {
+        inputData = $('#attempt').val()
         alert($('#attempt').val());
+        alert($(this).val());
         alert(event.which);
         $.ajax({
           method: "POST",
