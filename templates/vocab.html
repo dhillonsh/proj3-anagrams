@@ -116,7 +116,7 @@
 </body> 
 <script>
 $(function() {
-     $('#attempt').on('change keydown keyup', function() {
+     $('#attempt').on("keyup", function(e) {
         inputData = $('#attempt').val()
         alert($('#attempt').val());
         alert($(this).val());
