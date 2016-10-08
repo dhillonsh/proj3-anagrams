@@ -127,12 +127,12 @@ $(function() {
           dataType: 'json',
           success:function(result) {
                alert(result['returnText']);
-               if(result['returnText'] == 'matched') {
+               if(result['status'] == 'success') window.location.replace("./success");
+               else if(result['returnText'] == 'matched') {
                     $('#foundList').show();     
                     $('#foundList > #results').append(inputData + ' ');
                } else {
                     $('#messagesList').prepend('<p class="message">' + result['returnText'] + '</p>');
-                    
                }
                //$('#message').(result['returnText']);
           }
