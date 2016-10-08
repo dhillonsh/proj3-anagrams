@@ -116,7 +116,7 @@
 </body> 
 <script>
 $(function() {
-     $('#attempt').on("keyup", function(e) {
+     $('#attempt').on("keypress", function(e) {
         if(e.which == 8) return false;
         inputData = $(this).val();
           
