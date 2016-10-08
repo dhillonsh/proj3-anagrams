@@ -117,11 +117,12 @@
 <script>
 $(function() {
      $('#attempt').on('input', function() {
+        inputData = this.value
         $.ajax({
           method: "POST",
           url: "/_check",
           data: {
-               'attempt': this.value
+               'attempt': inputData
           },
           dataType: 'json',
           success:function(result) {
@@ -129,7 +130,7 @@ $(function() {
                alert(result['returnText']);
                if(result['returnText'] == 'matched') {
                     $('#foundList').show();     
-                    
+                    $('#foundList > #results').append(inputData);
                }
                //$('#message').(result['returnText']);
           }
