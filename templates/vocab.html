@@ -91,7 +91,7 @@
 <br />
 
 
-<span id="foundList" {% if session.matches|length is equalto 0  %}style="display:none;"{% endif %}/>
+<span id="foundList" {% if session.matches|length is equalto 0  %}style="display:none;"{% endif %} />
 <h2>You found </h2>
 <p id="results">
   {% for match in session.matches %}
@@ -127,7 +127,7 @@ $(function() {
           success:function(result) {
                alert(result['status']);
                alert(result['returnText']);
-               $('#message').(result['returnText']);
+               #$('#message').(result['returnText']);
           }
         });
      });
