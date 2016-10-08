@@ -115,7 +115,10 @@
 </body> 
 <script>
 $(function() {
-     alert('test');
+     $('#attempt').on('keypress', function() {
+        alert($('#attempt').val());  
+          
+     });
      
 });
      
