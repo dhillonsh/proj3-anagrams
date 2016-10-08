@@ -81,6 +81,8 @@ def check():
   made only from the jumble letters, and not a word they
   already found.
   """
+  
+  return 'good'
   app.logger.debug("Entering check")
 
   ## The data we need, from form and from cookie
