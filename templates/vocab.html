@@ -131,6 +131,7 @@ $(function() {
                if(result['status'] == 'success') window.location.href = "success";
                else if(result['status'] == 'keep_going') {
                     if(result['returnText'] == 'matched') {
+                         alert('1');
                          $('#foundList').show();     
                          $('#foundList > #results').append(inputData + ' ');
                          $('#attempt').val('');
