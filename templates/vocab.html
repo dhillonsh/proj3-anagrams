@@ -127,6 +127,10 @@ $(function() {
           success:function(result) {
                alert(result['status']);
                alert(result['returnText']);
+               if(result['returnText'] == 'matched') {
+                    $('#foundList').show();     
+                    
+               }
                //$('#message').(result['returnText']);
           }
         });
