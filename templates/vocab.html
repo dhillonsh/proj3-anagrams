@@ -118,6 +118,7 @@ $(function() {
      $('#attempt').on('input', function() {
         this.value
         $.ajax({
+          method: "POST",
           url: "/_check",
           data: this.value,
           dataType: 'json',
