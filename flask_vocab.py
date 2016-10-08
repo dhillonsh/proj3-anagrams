@@ -81,7 +81,7 @@ def check():
   made only from the jumble letters, and not a word they
   already found.
   """
-  
+  print('we here')
   return 'good'
   app.logger.debug("Entering check")
 
