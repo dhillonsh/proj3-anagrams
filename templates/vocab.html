@@ -115,10 +115,9 @@
 </body> 
 <script>
 $(function() {
-     $('#attempt').on('keypress', function() {
+     $('#attempt').keypress(function() {
         alert($('#attempt').val());  
-        alert($(this).val());
-          alert($(this).value);
+        alert(this.value);
      });
      
 });
