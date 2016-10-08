@@ -131,6 +131,7 @@ $(function() {
                     if(result['returnText'] == 'matched') {
                          $('#foundList').show();     
                          $('#foundList > #results').append(inputData + ' ');
+                         $('#attempt').text('');
                     } else {
                          $('#messagesList').prepend('<p class="message">' + result['returnText'] + '</p>');
                     }
