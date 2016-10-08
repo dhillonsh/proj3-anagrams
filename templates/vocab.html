@@ -116,7 +116,6 @@
 <script>
 $(function() {
      $('#attempt').on('input', function() {
-        this.value
         $.ajax({
           method: "POST",
           url: "/_check",
@@ -127,10 +126,10 @@ $(function() {
           success:function(result) {
                alert(result['status']);
                alert(result['returnText']);
+               $('#message').html(result['returnText']);
           }
         });
      });
-     
 });
      
 </script>
