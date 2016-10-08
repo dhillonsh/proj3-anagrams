@@ -114,7 +114,7 @@ def check():
     return jsonify(status='success')
     #return flask.redirect(url_for("success"))
   else:
-    return jsonify(status='bad', returnText=returnText)
+    return jsonify(status='keep_going', returnText=returnText)
     #return flask.redirect(url_for("keep_going"))
 
 ###############
