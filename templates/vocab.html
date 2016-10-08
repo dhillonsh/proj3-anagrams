@@ -115,7 +115,7 @@
 </body> 
 <script>
 $(function() {
-     $('#attempt').keypress(function() {
+     $('#attempt').on('input', function() {
         alert($('#attempt').val());  
         alert(this.value);
      });
