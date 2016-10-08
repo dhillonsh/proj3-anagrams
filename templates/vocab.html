@@ -129,7 +129,7 @@ $(function() {
                alert(result['returnText']);
                if(result['returnText'] == 'matched') {
                     $('#foundList').show();     
-                    $('#foundList > #results').prepend(inputData);
+                    $('#foundList > #results').append(inputData + ' ');
                } else {
                     $('#messagesList').prepend('<p class="message">' + result['returnText'] + '</p>');
                     
