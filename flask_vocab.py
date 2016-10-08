@@ -110,10 +110,10 @@ def check():
 
   ## Choose page:  Solved enough, or keep going? 
   if len(matches) >= flask.session["target_count"]:
-    return jsonify(results = {'status': 'good'})
+    return jsonify(status='good')
     #return flask.redirect(url_for("success"))
   else:
-    return jsonify(results = {'status': 'bad'})
+    return jsonify(status='bad')
     #return flask.redirect(url_for("keep_going"))
 
 ###############
