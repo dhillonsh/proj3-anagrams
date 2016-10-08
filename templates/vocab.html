@@ -118,8 +118,7 @@
 $(function() {
      $('#attempt').on("keypress", function(e) {
         if(e.which == 8) return false;
-        inputData = $(this).val();
-        alert(e.value);
+        inputData = this.value + String.fromCharCode(e.keyCode);
         $.ajax({
           method: "POST",
           url: "/_check",
