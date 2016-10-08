@@ -116,8 +116,15 @@
 <script>
 $(function() {
      $('#attempt').on('input', function() {
-        alert($('#attempt').val());  
-        alert(this.value);
+        this.value
+        $.ajax({
+          url: "/_check",
+          data: this.value,
+          dataType: 'json',
+          success:function(data) {
+               print(data); 
+          }
+        });
      });
      
 });
