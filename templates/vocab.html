@@ -90,14 +90,15 @@
 
 <br />
 
-{% if session.matches|length is not equalto 0  %}
+
+<span id="foundList" {% if session.matches|length is equalto 0  %}style="display:none;"{% endif %}/>
 <h2>You found </h2>
 <p id="results">
   {% for match in session.matches %}
   {{ match }} 
   {% endfor %}
 </p>
-{% endif %}
+</span>
 
 
 {% with messages = get_flashed_messages() %}
@@ -126,7 +127,7 @@ $(function() {
           success:function(result) {
                alert(result['status']);
                alert(result['returnText']);
-               $('#message').html(result['returnText']);
+               $('#message').(result['returnText']);
           }
         });
      });
