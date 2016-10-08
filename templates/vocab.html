@@ -127,11 +127,13 @@ $(function() {
           dataType: 'json',
           success:function(result) {
                if(result['status'] == 'success') window.location.href = "success";
-               else if(result['returnText'] == 'matched') {
-                    $('#foundList').show();     
-                    $('#foundList > #results').append(inputData + ' ');
-               } else {
-                    $('#messagesList').prepend('<p class="message">' + result['returnText'] + '</p>');
+               else if(result['status'] == 'keep_going') {
+                    if(result['returnText'] == 'matched') {
+                         $('#foundList').show();     
+                         $('#foundList > #results').append(inputData + ' ');
+                    } else {
+                         $('#messagesList').prepend('<p class="message">' + result['returnText'] + '</p>');
+                    }
                }
           }
         });
