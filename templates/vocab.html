@@ -100,7 +100,7 @@
 </p>
 </span>
 
-
+<span id="messagesList">
 {% with messages = get_flashed_messages() %}
   {% if messages %}
     <!-- Mismatch, already found, etc. "flashed" from Python -->
@@ -109,7 +109,7 @@
     {% endfor %}
   {% endif %}
 {% endwith %}
-
+</span>
 
 
  </div> <!-- container -->
@@ -126,11 +126,13 @@ $(function() {
           },
           dataType: 'json',
           success:function(result) {
-               alert(result['status']);
                alert(result['returnText']);
                if(result['returnText'] == 'matched') {
                     $('#foundList').show();     
                     $('#foundList > #results').append(inputData);
+               } else {
+                    $('#messagesList').append('<p class="message">' + result['returnTrxt'] + '</p>');
+                    
                }
                //$('#message').(result['returnText']);
           }
