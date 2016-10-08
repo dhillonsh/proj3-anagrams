@@ -117,10 +117,9 @@
 <script>
 $(function() {
      $('#attempt').on("keyup", function(e) {
-        inputData = $('#attempt').val()
-        alert($('#attempt').val());
-        alert($(this).val());
-        //alert(e.which);
+        if(e.which == 8) return false;
+        inputData = $(this).val();
+          
         $.ajax({
           method: "POST",
           url: "/_check",
