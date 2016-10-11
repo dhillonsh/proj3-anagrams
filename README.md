@@ -9,7 +9,10 @@
 * The purpose of this project was to modify an existing system that submitted a POST request through a form. The modifications were to use AJAX interactions on each keystroke instead.
 
 ### Application Specifics ###
-
+* The application runs on the flask_vocab.py script and displays either:
+  * The index page template
+  * or the respective error template: 400, 403, 500
+* As keystrokes are read, a JSON object will be sent to the server via a POST request. The returned data will then either be displayed or make some modification to the anagram page.
 
 ### Running the Application ###
 * Test deployment to other environments including Raspberry Pi.  Deployment 
