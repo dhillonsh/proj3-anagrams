@@ -26,4 +26,4 @@
  
 ### Testing the Applicaiton ###
 * Nose tests for vocab.py, letterbag.py, and jumble.py can be run with:
-* `nosetests`
+  * `nosetests`
