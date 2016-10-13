@@ -24,6 +24,6 @@
   * (control-C to stop program)
 * The default port is 5000, so the webserver should be reachable at http://localhost:5000 , and also through its IP address.
  
-### Testing the Applicaiton ###
+### Testing the Application ###
 * Nose tests for vocab.py, letterbag.py, and jumble.py can be run with:
   * `nosetests`
